@@ -10,13 +10,13 @@ metadata:
 #    helm.sh/chart: llmwhisperer-2.56.2
   annotations:
     alb.ingress.kubernetes.io/backend-protocol: "HTTPS"
-    alb.ingress.kubernetes.io/success-codes: "200-300"
+    alb.ingress.kubernetes.io/success-codes: "200-302"
     alb.ingress.kubernetes.io/ssl-policy: "ELBSecurityPolicy-TLS13-1-2-Ext1-2021-06"
 #    alb.ingress.kubernetes.io/wafv2-acl-arn: "arn:aws:wafv2:us-east-2:590183948166:regional/webacl/NJ-Default-Internal-WAFv2/9afe636d-fc7c-412e-9342-f5b89cc76e6e"
     alb.ingress.kubernetes.io/load-balancer-name: "llmwhisperer-alb"
     alb.ingress.kubernetes.io/ssl-redirect: "443"
     alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:us-east-2:058264298758:certificate/00686684-33c1-4e3c-825c-e48e8b5e95d6"
-    #alb.ingress.kubernetes.io/healthcheck-path: "/api/v1/health/"
+    alb.ingress.kubernetes.io/healthcheck-path: "/"
     alb.ingress.kubernetes.io/scheme: "internal"
     alb.ingress.kubernetes.io/target-type: "ip"
     alb.ingress.kubernetes.io/tags: "org:appname=unstract,org:appsuite=eks,org:branch=develop,org:cmdbid=NA,org:domain=ejm,org:publicfacing=false,org:repo=EJ/llmwhisperer,org:teamname=cloud,dr:rpo=24h,org:compliance=NA,org:dataclassification=NA,org:automation:env=int"
