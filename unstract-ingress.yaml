@@ -10,7 +10,7 @@ metadata:
     alb.ingress.kubernetes.io/load-balancer-name: "unstract-alb"
     alb.ingress.kubernetes.io/ssl-redirect: "443"
     alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:us-east-2:058264298758:certificate/00686684-33c1-4e3c-825c-e48e8b5e95d6"
-    alb.ingress.kubernetes.io/healthcheck-path: "/api/v1/health/"
+#    alb.ingress.kubernetes.io/healthcheck-path: "/api/v1/health/"
     alb.ingress.kubernetes.io/scheme: "internal"
     alb.ingress.kubernetes.io/target-type: "ip"
     alb.ingress.kubernetes.io/tags: "org:appname=unstract-platform,org:appsuite=eks,org:branch=develop,org:cmdbid=NA,org:domain=ejm,org:publicfacing=false,org:repo=EJ/unstract_repo,org:teamname=cloud,dr:rpo=24h,org:compliance=NA,org:dataclassification=NA,org:automation:env=int"
