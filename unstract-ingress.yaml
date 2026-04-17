@@ -37,11 +37,11 @@ spec:
         paths:
          - path: /api/v1
            pathType: Prefix
-            backend:
-              service:
-                name: unstract-backend
-                port:
-                  number: 80                
+           backend:
+             service:
+               name: unstract-backend
+               port:
+                 number: 80                
           - path: /deployment
             pathType: Prefix
             backend:
