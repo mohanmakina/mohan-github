@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: llmwhisperer
   labels:
-    app.kubernetes.io/instance: llmwhisperer
+#    app.kubernetes.io/instance: llmwhisperer
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/name: llmwhisperer
     app.kubernetes.io/version: "1.34"
@@ -15,6 +15,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
     alb.ingress.kubernetes.io/ssl-redirect: "443"
+    alb.ingress.kubernetes.io/backend-protocol: HTTPS
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-2:058264298758:certificate/00686684-33c1-4e3c-825c-e48e8b5e95d6
     alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-TLS13-1-2-2021-06
     alb.ingress.kubernetes.io/load-balancer-name: llmwhisperer-alb
@@ -27,7 +28,7 @@ metadata:
     alb.ingress.kubernetes.io/subnets: subnet-05bde20a2097e9345,subnet-090a90c2cb72e080b,subnet-0797863edfb121d1d
     # Uncomment when ready:
     # alb.ingress.kubernetes.io/group.name: llmwhisperer
-    alb.ingress.kubernetes.io/tags: org:appname=unstract,org:appsuite=contract,org:branch=develop,org:cmdbid=na,org:domain=ejm,org:publicfacing=false,org:repo=EJ/llmwhisperer,org:teamname=cloud,dr:rpo=24h,org:compliance=na,org:dataclassification=private,org:automation:env=int
+    alb.ingress.kubernetes.io/tags: org:appname=unstract,org:appsuite=eks,org:branch=develop,org:cmdbid=na,org:domain=ejm,org:publicfacing=false,org:repo=EJ/llmwhisperer,org:teamname=cloud,dr:rpo=24h,org:compliance=na,org:dataclassification=private,org:automation:env=int
     # alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:<region>:<account-id>:regional/webacl/<name>/<id>
 spec:
   ingressClassName: alb
