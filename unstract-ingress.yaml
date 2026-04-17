@@ -38,34 +38,34 @@ spec:
          - path: /api/v1
            pathType: Prefix
            backend:
-             service:
-               name: unstract-backend
-               port:
-                 number: 80                
-          - path: /deployment
-            pathType: Prefix
-            backend:
-              service:
-                name: unstract-backend
-                port:
-                  number: 80
-          - path: /public
-            pathType: Prefix
-            backend:
-              service:
-                name: unstract-backend
-                port:
-                  number: 80            
-          - path: /mr
-            pathType: Prefix
-            backend:
               service:
                 name: unstract-backend
                 port:
                   number: 80                
-          - path: /
-            pathType: Prefix
-            backend:
+         - path: /deployment
+           pathType: Prefix
+           backend:
+              service:
+                name: unstract-backend
+                port:
+                  number: 80
+         - path: /public
+           pathType: Prefix
+           backend:
+              service:
+                name: unstract-backend
+                port:
+                  number: 80            
+         - path: /mr
+           pathType: Prefix
+           backend:
+              service:
+                name: unstract-backend
+                port:
+                  number: 80                
+         - path: /
+           pathType: Prefix
+           backend:
               service:
                 name: unstract-frontend
                 port:
