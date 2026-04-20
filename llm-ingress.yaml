@@ -28,7 +28,8 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - http:
+    - host: internal-llmwhisperer-alb-636146051.us-east-2.elb.amazonaws.com
+      http:
         paths:
           - path: /
             pathType: Prefix
