@@ -20,7 +20,7 @@ metadata:
     alb.ingress.kubernetes.io/scheme: "internal"
     alb.ingress.kubernetes.io/target-type: "ip"
     alb.ingress.kubernetes.io/tags: "org:appname=unstract,org:appsuite=eks,org:branch=develop,org:cmdbid=NA,org:domain=ejm,org:publicfacing=false,org:repo=EJ/llmwhisperer,org:teamname=cloud,dr:rpo=24h,org:compliance=NA,org:dataclassification=NA,org:automation:env=int"
-    alb.ingress.kubernetes.io/listen-ports: "'[{"HTTP":80},{"HTTPS":443}]'"
+    alb.ingress.kubernetes.io/listen-ports: "[{"HTTP":80},{"HTTPS":443}]"
     alb.ingress.kubernetes.io/subnets: "subnet-05bde20a2097e9345,subnet-090a90c2cb72e080b,subnet-0797863edfb121d1d"
     alb.ingress.kubernetes.io/security-groups: "sg-08b413d31a417d688"
     alb.ingress.kubernetes.io/healthcheck-protocol: "HTTP"
