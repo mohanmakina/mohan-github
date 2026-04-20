@@ -28,7 +28,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: internal-llmwhisperer-alb-636146051.us-east-2.elb.amazonaws.com
+    - host: llmwhispererdev.awsejmint.netjets.com
       http:
         paths:
           - path: /
