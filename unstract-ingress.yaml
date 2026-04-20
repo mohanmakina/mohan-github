@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: unstract-ingress
   annotations:
-    alb.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    alb.ingress.kubernetes.io/backend-protocol: "HTTP"
     alb.ingress.kubernetes.io/success-codes: "200-300"
     alb.ingress.kubernetes.io/ssl-policy: "ELBSecurityPolicy-TLS13-1-2-Ext1-2021-06"
 #    alb.ingress.kubernetes.io/wafv2-acl-arn: "arn:aws:wafv2:us-east-2:590183948166:regional/webacl/NJ-Default-Internal-WAFv2/9afe636d-fc7c-412e-9342-f5b89cc76e6e"
@@ -14,10 +14,10 @@ metadata:
     alb.ingress.kubernetes.io/scheme: "internal"
     alb.ingress.kubernetes.io/target-type: "ip"
     alb.ingress.kubernetes.io/tags: "org:appname=unstract-platform,org:appsuite=eks,org:branch=develop,org:cmdbid=NA,org:domain=ejm,org:publicfacing=false,org:repo=EJ/unstract_repo,org:teamname=cloud,dr:rpo=24h,org:compliance=NA,org:dataclassification=NA,org:automation:env=int"
-    alb.ingress.kubernetes.io/listen-ports: "[{\"HTTPS\": 443}]"
+    alb.ingress.kubernetes.io/listen-ports: "[{"HTTP":80},{"HTTPS":443}]"
     alb.ingress.kubernetes.io/subnets: "subnet-05bde20a2097e9345,subnet-090a90c2cb72e080b,subnet-0797863edfb121d1d"
     alb.ingress.kubernetes.io/security-groups: "sg-08b413d31a417d688"
-    alb.ingress.kubernetes.io/healthcheck-protocol: "HTTPS"
+    alb.ingress.kubernetes.io/healthcheck-protocol: "HTTP"
     alb.ingress.kubernetes.io/load-balancer-attributes: "idle_timeout.timeout_seconds=600"
 spec:
   ingressClassName: alb
