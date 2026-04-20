@@ -28,8 +28,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-    - host: llmwhispererdev.awsejmint.netjets.com
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix
