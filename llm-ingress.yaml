@@ -38,3 +38,10 @@ spec:
                 name: llmwhisperer-dashboard
                 port:
                   number: 3007
+            - path: /backend
+              pathType: Prefix
+              backend:
+                service:
+                  name: llmwhisperer-backend
+                  port:
+                    number: 3006
